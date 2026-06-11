@@ -1,0 +1,6 @@
+{
+  "name": "Architectural Intelligence",
+  "description": "SFNG - A high-end architectural engineering consultant interface for designing and running AI workflows and agentic intelligence systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

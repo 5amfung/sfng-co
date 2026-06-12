@@ -30,7 +30,88 @@ import {
 import { PRESET_BLUEPRINTS } from "./presetData";
 import { AppNode, NodeEdge, BlueprintPreset } from "./types";
 
-export default function App() {
+function DailyLanding() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <div className="daily-page">
+      <div className="daily-shell">
+        <header className="daily-header">
+          <a className="daily-home-link" href="/">
+            SFNG
+          </a>
+          <nav className="daily-nav" aria-label="Daily links">
+            <a href="#why">why</a>
+            <a href="/daily/privacy.html">privacy</a>
+            <a href="/daily/terms.html">terms</a>
+          </nav>
+        </header>
+
+        <main>
+          <section className="daily-hero" aria-labelledby="daily-title">
+            <p className="daily-kicker">/daily/index.html</p>
+            <h1 id="daily-title">Daily</h1>
+            <p className="daily-tagline">
+              A quiet study app for saving the words, phrases, and tiny pieces
+              of knowledge you want to remember.
+            </p>
+            <div className="daily-rule" aria-hidden="true">
+              ------------------------------------------------------------
+            </div>
+            <p className="daily-intro">
+              Daily keeps decks, entries, search, and review in one small
+              local-first place. Add what you are learning, review it when it is
+              due, and keep moving.
+            </p>
+          </section>
+
+          <section className="daily-panel" id="why" aria-labelledby="why-title">
+            <p className="daily-section-label">01 // why it exists</p>
+            <h2 id="why-title">Most study apps feel like chores.</h2>
+            <p>
+              Daily is built for the smaller, more personal habit: capture a
+              thing worth remembering, give it enough context to matter, and let
+              the review queue bring it back before it fades.
+            </p>
+          </section>
+
+          <section className="daily-grid" aria-label="Daily feature list">
+            <article>
+              <p className="daily-section-label">deck</p>
+              <h3>Organize what belongs together.</h3>
+              <p>
+                Keep vocab, examples, notes, and prompts in focused decks.
+              </p>
+            </article>
+            <article>
+              <p className="daily-section-label">review</p>
+              <h3>Practice from memory.</h3>
+              <p>
+                Prompt first, answer second, then score the card and advance.
+              </p>
+            </article>
+            <article>
+              <p className="daily-section-label">search</p>
+              <h3>Find the thing again.</h3>
+              <p>
+                Search across entries when you remember the shape but not the
+                deck.
+              </p>
+            </article>
+          </section>
+
+        </main>
+
+        <footer className="daily-footer">
+          <p>Daily is made by SFNG LLC.</p>
+          <p>(c) {currentYear} SFNG LLC</p>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+function BlueprintLanding() {
   // Navigation & UI State
   const [activePreset, setActivePreset] = useState<BlueprintPreset>(PRESET_BLUEPRINTS[0]);
   const [labOpen, setLabOpen] = useState(false);
@@ -966,4 +1047,12 @@ pipeline:
 
     </div>
   );
+}
+
+export default function App() {
+  if (window.location.pathname === "/daily" || window.location.pathname === "/daily/") {
+    return <DailyLanding />;
+  }
+
+  return <BlueprintLanding />;
 }

@@ -50,3 +50,233 @@
   background: rgba(0, 71, 255, 0.5);
 }
 
+.daily-page {
+  min-height: 100vh;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 51, 102, 0.04) 0,
+      rgba(0, 51, 102, 0.04) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    #f2f0df;
+  color: #111;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.daily-shell {
+  width: min(920px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 22px 0 38px;
+}
+
+.daily-header,
+.daily-footer,
+.daily-hero,
+.daily-panel,
+.daily-grid article {
+  border: 1px solid #111;
+  background: #fffdee;
+  box-shadow: 4px 4px 0 #111;
+}
+
+.daily-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 8px 12px;
+  margin-bottom: 24px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.daily-home-link {
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.daily-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px 14px;
+  font-size: 13px;
+}
+
+.daily-page a {
+  color: #003399;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.daily-page a:hover,
+.daily-page a:focus-visible {
+  color: #990000;
+}
+
+.daily-hero {
+  padding: clamp(24px, 6vw, 54px);
+  margin-bottom: 22px;
+}
+
+.daily-kicker,
+.daily-section-label,
+.daily-footer {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.daily-kicker {
+  margin: 0 0 14px;
+  color: #555;
+  font-size: 13px;
+}
+
+.daily-hero h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 12vw, 128px);
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.daily-tagline {
+  max-width: 640px;
+  margin: 24px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3.6vw, 34px);
+  line-height: 1.18;
+}
+
+.daily-rule {
+  overflow: hidden;
+  margin: 28px 0 20px;
+  color: #777;
+  white-space: nowrap;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+}
+
+.daily-intro {
+  max-width: 660px;
+  margin: 0;
+}
+
+.daily-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin-top: 24px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+.daily-panel {
+  padding: 24px;
+  margin: 22px 0;
+}
+
+.daily-section-label {
+  margin: 0 0 8px;
+  color: #555;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.daily-panel h2,
+.daily-grid h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.daily-panel h2 {
+  max-width: 680px;
+  font-size: clamp(28px, 5vw, 48px);
+}
+
+.daily-panel p,
+.daily-grid p {
+  max-width: 680px;
+  margin: 0;
+}
+
+.daily-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 22px 0;
+}
+
+.daily-grid article {
+  padding: 18px;
+}
+
+.daily-grid h3 {
+  font-size: 24px;
+}
+
+.daily-panel-table {
+  overflow-x: auto;
+}
+
+.daily-panel table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+.daily-panel th,
+.daily-panel td {
+  border: 1px solid #111;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.daily-panel th {
+  width: 32%;
+  background: #e0ddbf;
+  font-weight: 700;
+}
+
+.daily-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px;
+  margin-top: 26px;
+  color: #333;
+  font-size: 12px;
+}
+
+.daily-footer p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .daily-header,
+  .daily-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .daily-nav {
+    justify-content: flex-start;
+  }
+
+  .daily-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .daily-panel,
+  .daily-grid article {
+    box-shadow: 3px 3px 0 #111;
+  }
+}

@@ -37,9 +37,7 @@ function DailyLanding() {
     <div className="daily-page">
       <div className="daily-shell">
         <header className="daily-header">
-          <a className="daily-home-link" href="/">
-            SFNG
-          </a>
+          <span className="daily-home-link">Daily</span>
           <nav className="daily-nav" aria-label="Daily links">
             <a href="#why">why</a>
             <a href="/daily/privacy.html">privacy</a>
@@ -49,7 +47,6 @@ function DailyLanding() {
 
         <main>
           <section className="daily-hero" aria-labelledby="daily-title">
-            <p className="daily-kicker">/daily/index.html</p>
             <h1 id="daily-title">Daily</h1>
             <p className="daily-tagline">
               A quiet study app for saving the words, phrases, and tiny pieces
